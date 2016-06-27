@@ -219,15 +219,8 @@ a.whitelink:visited, a.whitelink {
 /*timeline css*/
 .time{
 color:#0a4883;
-font-size:39px;
+font-size:200%;
 }
-
-.timeline{
-	font-size:39px;
-	text-align:center;
-}
-
-
 
 .info{
 display:block;
