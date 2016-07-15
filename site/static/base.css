@@ -1,19 +1,22 @@
 /*
- * built by Fox Wilson
- * http://fwilson.me/
- */
-
-/*
  * colors:
  *  blue: #0a4883
  *  red: #c5392f
  *  white: #ffffff
- *  isn't this such a brilliant color scheme though
  */
 
 * {
-    font-family: 'Lora', serif;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
     line-height: 1.5;
+}
+
+body {
+    background-color: #FFF;
+	line-height: 1.5;
+}
+
+p, ul {
+    text-align: justify;
 }
 
 .button-primary {
@@ -22,42 +25,66 @@
     color: white;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-
-body {
-    background-image: url("/static/texture.png");
-    background-repeat: repeat;
-}
-
-p, ul {
-    text-align: justify;
-}
-
-.logo-image {
-    height: 40px;
-    vertical-align: middle;
-    margin-right: 7px; /* completely arbitrary */
-}
-.pure-menu-heading {
-    text-transform: none;
-    margin-top: 3px;
-    font-size: 140%;
-}
-.primary-menu {
-    background: white;
-    z-index: 999999; /* yeah lol */
-    margin-bottom: 0;
-    overflow-x: auto;
-}
-
+/* --- header/footer styles --- */
 #header {
-    margin-bottom: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #FFF;
+	box-shadow: 0px 0px 5px #000;
+	z-index: 999;
 }
 
-.pure-menu-link {
-    color: #0a4883;
+.header-logo-image {
+	height: 80px;
+    vertical-align: middle;
+	float: left;
+}
+
+.header-nav {
+	list-style-type: none;
+	padding: 0;
+}
+
+.header-tab {
+	float: left;
+	font-size: 28px;
+	font-weight: bold;
+	margin: 0px 15px;
+}
+
+.header-tab a{
+	text-decoration: none;
+	color: #223153;
+	
+	-webkit-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s;
+}
+.header-tab a:hover{
+	text-decoration: none;
+	color: #375087;
+}
+
+.contribute-button {
+	background-color: #ff4c62;
+	color: #FFF;
+	padding: 0px 6px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	
+	-webkit-transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+}
+.contribute-button:hover {
+	background-color: #FF6679;
 }
 
 .content {
+	margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -76,46 +103,137 @@ p, ul {
     margin-bottom: 10px;
 }
 
-@media screen and (min-width: 700px) {
-    .main-content {
-        width: 80%;
-        margin: auto;
-    }
-    .call-to-action > .cta-text {
-        width: 80%;
-        margin: auto;
-    }
+@media screen and (max-width:1600px) {
+	.header-tab {
+		float: left;
+		font-size: 20px;
+		font-weight: bold;
+		margin: 0px 10px;
+	}
+	.header-logo-image {
+		height: 60px;
+		vertical-align: middle;
+	}
+	.content {
+		margin-top: 60px;
+	}
+}
+@media screen and (max-width:1200px) {
+	#header {
+		position: static;
+		padding-bottom: 5px;
+	}
+	.header-logo-image {
+		display: block;
+		float: none;
+		margin: auto;
+	}
+	.header-nav {
+		margin: 0;
+	}
+	.header-tab {
+		display: block;
+		float: none;
+		width: 100%;
+		text-align: center;
+		margin: 5px 0px;
+	}
+	.header-nav:last-child {
+		margin-bottom: 0px;
+	}
+	.header-nav .contribute-button {
+		max-width: 400px;
+		margin: auto;
+	}
+	.content {
+		margin-top: 0;
+	}
 }
 
-@media screen and (max-width: 699px) {
-    .main-content {
-        width: 90%;
-        margin: auto;
-    }
-    .call-to-action > .cta-text {
-        width: 90%;
-        margin: auto;
-    }
-
+.footer-text {
+    width: 70%;
+    margin: auto;
 }
 
-.content-section {
-    background-color: #0a4883;
-    margin-top: 10px;
-    padding: 2px 20px;
-    color: white;
-    border-radius: 2px;
+.footer {
+    padding: 10px 0;
+    padding-bottom: 40px;
+    background-color: #16489d;
+	color: #FFF;
+    box-shadow: 0 -2px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    width: 100%;
 }
 
-.bottom-too { margin-bottom: 15px; }
-
-.form-card {
-    background-color: white;
-    padding: 2px 20px;
-    margin-top: 10px;
-    padding-bottom: 20px;
-    border-radius: 2px;
+.small-logo {
+	height: 80px;
+	margin: 40px;
 }
+
+.footer-button {
+	box-sizing: border-box;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 10px;
+	padding: 6px 10px;
+}
+.footer-button:hover {
+	color: #16489d;
+	background-color: #FFF;
+}
+
+.footer-disclaimer {
+	box-sizing: border-box;
+	font-size: 20px;
+	text-align: center;
+	color: #7391c4;
+	border: solid 2px #7391c4;
+	border-radius: 10px;
+	padding: 25px;
+	margin: 30px 0px;
+	margin-bottom: 50px;
+}
+
+.small-logo {
+	height: 80px;
+	margin: 40px;
+}
+
+.footer-button {
+	box-sizing: border-box;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 10px;
+	padding: 6px 10px;
+}
+.footer-button:hover {
+	color: #16489d;
+	background-color: #FFF;
+}
+
+.footer-disclaimer {
+	box-sizing: border-box;
+	font-size: 20px;
+	text-align: center;
+	color: #7391c4;
+	border: solid 2px #7391c4;
+	border-radius: 10px;
+	padding: 25px;
+	margin: 30px 0px;
+	margin-bottom: 50px;
+}
+
+.footer-links {
+	color: #7391c4;
+	font-size: 16px;
+	text-align: center;
+}
+.footer-links a {
+	margin: 0px 20px;
+}
+/* --- end header/footer styles --- */
 
 input:not([type=checkbox]) {
     width: 100%;
@@ -130,34 +248,6 @@ label.inline-label {
     padding-right: 3px;
 }
 
-.main-content:last-child {
-    margin-bottom: 10px;
-}
-
-.footer-text {
-    width: 70%;
-    margin: auto;
-}
-
-.footer {
-    margin-top: 20px;
-    padding: 10px 0;
-    padding-bottom: 40px;
-    background: white;
-    box-shadow: 0 -2px rgba(0, 0, 0, 0.1);
-
-    bottom: 0;
-    width: 100%;
-}
-
-.flashed-message {
-    width: 70%;
-    padding: 15px 25px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-}
-
 .message-error {
     color: white;
     background-color: #c5392f;
@@ -168,17 +258,6 @@ label.inline-label {
     background-color: #0a4883;
 }
 
-.person-card {
-    width: 90%;
-    margin: auto;
-}
-
-.person-image {
-    float: left;
-    margin-right: 5px;
-    border-radius: 7px;
-}
-
 a.whitelink:visited, a.whitelink {
     color: #ffffff;
 }
@@ -187,31 +266,4 @@ a.whitelink:visited, a.whitelink {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-.img {
-    max-width: 95%;
-}
-
-.fullwidth {
-    width: 100%;
-}
-
-.approval1 {
-    background-color: #32CD32;
-}
-
-.approval-1 {
-    background-color: #FF2400;
-}
-
-.nodec {
-    text-decoration: none;
-}
-
-.social {
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-  margin-right: 8px;
 }
