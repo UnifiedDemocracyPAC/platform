@@ -1,7 +1,7 @@
 import os
 
 SEND_EMAIL = True
-EMAIL_FROM = "site@unifieddemocracy.org"
+EMAIL_FROM = "site@unifieddemocracypac.org"
 APP_NAME = "Unified Democracy"
 
 SECRET_KEY = os.getenv("SECRET_KEY", os.urandom(32))

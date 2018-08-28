@@ -2,7 +2,7 @@
 
 ## What is this?
 This is the code that runs the Unified Democracy platform. You can find the
-`master` branch live at [the Unified Democracy website](https://unifieddemocracy.org).
+`master` branch live at [the Unified Democracy website](https://unifieddemocracypac.org).
 
 ## What do I do if I find a bug?
 If you find a bug, that is not security-related, you should report it on GitHub
@@ -11,7 +11,7 @@ issue**. Instead, follow the directions below.
 
 If you find a security-related bug (for example, if user or volunteer
 information is disclosed to someone who shouldn't have it), you should send me an
-email at `foxwilson123@gmail.com`. Please don't publically disclose the bug or
+email at `tris@lessbroken.org`. Please don't publically disclose the bug or
 exploit it beyond what you need to report it to me. Use common sense and handle
 this responsibly, please. If you'd like to PGP-encrypt your bug report, my key
 is:

@@ -30,8 +30,8 @@ def show_state_page(state_code):
             flash_errors(form)
             return render_template("states/apply.html", form=form)
         message = render_template("states/apply_email.html", form=form)
-        send_email(current_app.config["EMAIL_FROM"], 'benjamin.burstein@unifieddemocracy.org', 'State Director Application - {}'.format(current_app.config.get("APP_NAME", "Unified Democracy")), message)
-        send_email(current_app.config["EMAIL_FROM"], 'victoria.bevard@unifieddemocracy.org', 'State Director Application - {}'.format(current_app.config.get("APP_NAME", "Unified Democracy")), message)
+        send_email(current_app.config["EMAIL_FROM"], 'benjamin.burstein@unifieddemocracypac.org', 'State Director Application - {}'.format(current_app.config.get("APP_NAME", "Unified Democracy")), message)
+        send_email(current_app.config["EMAIL_FROM"], 'victoria.bevard@unifieddemocracypac.org', 'State Director Application - {}'.format(current_app.config.get("APP_NAME", "Unified Democracy")), message)
         flash("Application Successful", "success")
         return redirect(url_for("staticpages.show_staticpage", page="index"))
 

@@ -1,7 +1,7 @@
 import os
 
 SEND_EMAIL = False
-EMAIL_FROM = "test@unifieddemocracy.org"
+EMAIL_FROM = "test@unifieddemocracypac.org"
 APP_NAME = "Unified Democracy"
 SECRET_KEY = "key"
 
